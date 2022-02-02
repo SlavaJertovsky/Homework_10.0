@@ -1,15 +1,12 @@
-const coll1 = [8, 9, 21, 19, 18, 22, 7]; 
-const coll2 = [2, 0, 17, 3, 9, 15, 4]; 
-
-function calculateSum (items) {  // Объявлем функцию
-    let sum = 0;                    // Создаём точку отсчёта
-    items.forEach(function (item) { // Используеи метод для forEach для перебора всех элементов.
-      if (item % 3 === 0)  {        // Условие при котором элементы будут принимать функцию сложения.
-      sum = sum + item;
-    }
-    })
-    return sum;
+function removeChar(string) {  //Обьявляем функцию
+    if (string.length > 2){      //Задаём условие. Если символов больше 2-х, то выполняется текущий код
+    return string.slice(1, -1);  // Метод, позволяющий обрезать необходимые символы (первая с начала и первая с конца строки)
+  } else {
+    return string;              // В иных случаях, возвращается целая строка
   }
+  }
+  console.log(removeChar('eloquent')); // loquen
+  console.log(removeChar('country')); // ountr
+  console.log(removeChar('person')); // erso
+  console.log(removeChar('op'));    // op
   
-  console.log(calculateSum(coll1)); // 48
-  console.log(calculateSum(coll2)); // 27
